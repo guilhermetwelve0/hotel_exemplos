@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en" dir="ltr">
 
 <head>
@@ -329,3 +330,4 @@ header ul li a:hover {
 </body>
 
 </html>
+
