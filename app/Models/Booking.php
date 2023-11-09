@@ -12,6 +12,7 @@ class Booking extends Model
     protected $fillable = [
         'id',
         'hotel_id',
+        'registered_by',
         'guests_id',
         'room_id',
         'check_in_date',
@@ -19,5 +20,10 @@ class Booking extends Model
         'total',
         'status',
     ];
+
+    public function guest()
+    {
+        return $this->belongsTo(Guest::class);
+    }
 }
 

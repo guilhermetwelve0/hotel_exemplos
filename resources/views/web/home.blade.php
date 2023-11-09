@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
   <title>Hotel Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -226,106 +225,42 @@ header ul li a:hover {
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
-      </nav>
-    </div>
-  </header>
-  <script>
-    const hambuger = document.querySelector('.hambuger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    hambuger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-      hambuger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
-
-    const navLink = document.querySelectorAll('.nav-link');
-    navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-      hambuger.classList.remove("active");
-      navMenu.classList.remove("active");
-    }
-  </script>
-
-  <section class="home" id="home">
-    <div class="head_container">
-      <div class="box">
-        <div class="text">
-          <h1>Olá Sejam Bem Vindos</h1>
-          <h3>Bem-vindo ao nosso sistema de hotelaria! Sua estadia conosco será inesquecível.</h3>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="login">Login</a></li>
+                <li><a href="rooms">Rooms</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="content">
+                <!-- Galeria de Imagens -->
+                <section class="py-16">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-semibold text-center text-secondary mb-8">Nossas Instalações</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Adicione imagens da galeria aqui -->
+                    <div class="bg-cover bg-center h-96 rounded-lg"
+                        style="background-image: url('{{ asset('img/classic.jpg') }}');"></div>
+                    <div class="bg-cover bg-center h-96 rounded-lg"
+                        style="background-image: url('{{ asset('img/double.png') }}');"></div>
+                    <div class="bg-cover bg-center h-96 rounded-lg"
+                        style="background-image: url('{{ asset('img/superior.jpg') }}');"></div>
+                </div>
+            </div>
+        </section>    </section>
+    
+    <footer class="sticky-footer bg-green">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright © ESC - Hotel</span>
+            </div>
         </div>
-      </div>
-      <div class="image">
-        <img src="{{ asset('img/home1.jpg') }}" class="slide">
-      </div>
-      <div class="image_item">
-        <img src="{{asset('img/home1.jpg')}}" alt="" class="slide active" onclick="img('img/home1.jpg')">
-        <img src="{{asset('img/home2.jpg')}}" alt="" class="slide" onclick="img('img/home2.jpg')">
-        <img src="{{asset('img/home3.jpg')}}" alt="" class="slide" onclick="img('img/home3.jpg')">
-        <img src="{{asset('img/home4.jpg')}}" alt="" class="slide" onclick="img('img/home4.jpg')">
-      </div>
-    </div>
-  </section>
-  <script>
-    function img(anything) {
-      document.querySelector('.slide').src = anything;
-    }
-
-    function change(change) {
-      const line = document.querySelector('.image');
-      line.style.background = change;
-    }
-  </script>
-
-
-  <script>
-    var accItem = document.getElementsByClassName('accordionItem');
-    var accHD = document.getElementsByClassName('accordionIHeading');
-
-    for (i = 0; i < accHD.length; i++) {
-      accHD[i].addEventListener('click', toggleItem, false);
-    }
-
-    function toggleItem() {
-      var itemClass = this.parentNode.className;
-      for (var i = 0; i < accItem.length; i++) {
-        accItem[i].className = 'accordionItem close';
-      }
-      if (itemClass == 'accordionItem close') {
-        this.parentNode.className = 'accordionItem open';
-      }
-    }
-  </script>
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: false,
-      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    })
-  </script>
-
+    </footer>
 </body>
 
 </html>

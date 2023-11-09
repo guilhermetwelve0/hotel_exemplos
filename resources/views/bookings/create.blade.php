@@ -9,25 +9,22 @@
         @csrf
         <div class="row mb-3">
             <div class="col">
-                <input type="decimal" name="total" class="form-control" placeholder="Custo Total">
+                <input type="text" name="hotel_id" class="form-control" placeholder="Hotel">
             </div>
             <div class="col">
-                <input type="text" name="hospede_name" class="form-control" placeholder="Nome do Hospede">
+                <input type="text" name="guests_id" class="form-control" placeholder="Nome do Hóspede">
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="quarto_name" class="form-control" placeholder="Nome do Quarto">
+                <input type="text" name="room_id" class="form-control" placeholder="Quarto da Reserva">
             </div>
-
-        </div>
-        <div class="row mb-6">
             <div class="col">
                 <p>Data do Check-In</p>
                 <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in">
             </div>
         </div>
-        <div class="row mb-6">
+        <div class="row mb-3">
             <div class="col">
                 <p>Data do Check-out</p>
                 <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-out">
@@ -39,6 +36,12 @@
                 <input type="number" name="total_reserva" class="form-control" placeholder="Total da Reserva">
             </div>
         </div>
+        <div class="row mb-6">
+            <div class="col">
+                <input type="text" name="registered_by" class="form-control" placeholder="Registrado por">
+            </div>
+        </div>
+        <br>
         <div class="row mb-3">
             <div class="col">
                 <select name="status" class="form-control">
