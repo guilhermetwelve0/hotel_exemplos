@@ -26,7 +26,7 @@
         </div>
         <div class="col mb-3">
             <label class="form-label">Imagem</label>
-            <input type="date" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" readonly>
+            <input type="text" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" readonly>
         </div>
     </div>
     <div class="row">

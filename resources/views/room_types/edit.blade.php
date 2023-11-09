@@ -29,7 +29,7 @@
             </div>
             <div class="col mb-3">
                 <label class="form-label">Imagem</label>
-                <input type="date" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" >
+                <input type="text" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" >
             </div>
         </div>
         <div class="row">

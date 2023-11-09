@@ -10,38 +10,41 @@
         @method('PUT')
         <div class="row">
             <div class="col mb-3">
-                <label class="form-label">Hotel</label>
-                <input type="text" name="hotel_id" class="form-control" placeholder="Hotel" value="{{ $bookings->hotel_id }}" >
+                <label class="form-label">Hospede Name</label>
+                <input type="text" name="hospede_name" class="form-control" placeholder="Nome do Hospede" value="{{ $bookings->hospede_name }}" >
             </div>
             <div class="col mb-3">
-                <label class="form-label">Hóspede</label>
-                <input type="text" name="guests_id" class="form-control" placeholder="Nome do Hóspede" value="{{ $bookings->guests_id }}" >
-            </div>
-        </div>
-        <div class="row">
-            <div class="col mb-3">
-                <label class="form-label">Quarto</label>
-                <input type="text" name="room_id" class="form-control" placeholder="Quarto da Reserva" value="{{ $bookings->room_id }}" >
-            </div>
-            <div class="col mb-3">
-                <label class="form-label">Check-in</label>
-                <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in" value="{{ $bookings->check_in_date }}" >
+                <label class="form-label">Nome do Quarto</label>
+                <input type="text" name="quarto_name" class="form-control" placeholder="Nome do Quarto" value="{{ $bookings->quarto_name }}" >
             </div>
         </div>
         <div class="row">
             <div class="col mb-3">
-                <label class="form-label">Check-out</label>
-                <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-out" value="{{ $bookings->check_out_date }}" >
+                <label class="form-label">Check In</label>
+                <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-In " value="{{ $bookings->check_in_date }}" >
             </div>
             <div class="col mb-3">
-                <label class="form-label">Total</label>
-                <input type="number" name="total" class="form-control" placeholder="Total da Reserva" value="{{ $bookings->total }}" >
+                <label class="form-label">Check Out</label>
+                <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-Out" value="{{ $bookings->check_out_date }}" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label class="form-label">Total da Reserva</label>
+                <input type="decimal" name="total_reserva" class="form-control" placeholder="Total da Reserva" value="{{ $bookings->total_reserva }}" >
+            </div>
+            <div class="col mb-3">
+                <label class="form-label">Custo Total</label>
+                <input type="number" name="total" class="form-control" placeholder="Custo Total" value="{{ $bookings->total }}" >
             </div>
         </div>
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Status</label>
-                <input type="text" name="status" class="form-control" placeholder="Status da Reserva" value="{{ $bookings->status }}" >
+                <select name="status" class="form-control" value="{{ $bookings->status }}">
+                    <option value="ativo">Ativo</option>
+                    <option value="inativo">Inativo</option>
+                </select>
             </div>
         </div>
         <div class="row">

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
+use App\Models\Reserva;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -12,7 +12,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::orderBy('created_at', 'DESC')->get();
+        $bookings = Reserva::orderBy('id', 'DESC')->get();
         return view('bookings.index', compact('bookings'));
 
     }
@@ -30,7 +30,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        Booking::create($request->all());
+        Reserva::create($request->all());
 
         return redirect()->route('bookings')->with('success', 'Reserva adicionanda com sucesso');
     }
@@ -40,7 +40,7 @@ class BookingController extends Controller
      */
     public function show(string $id)
     {
-        $bookings = Booking::findOrFail($id);
+        $bookings = Reserva::findOrFail($id);
 
         return view('bookings.show', compact('bookings'));
     }
@@ -50,7 +50,7 @@ class BookingController extends Controller
      */
     public function edit(string $id)
     {
-        $bookings = Booking::findOrFail($id);
+        $bookings = Reserva::findOrFail($id);
 
         return view('bookings.edit', compact('bookings'));
     }
@@ -60,7 +60,7 @@ class BookingController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $bookings = Booking::findOrFail($id);
+        $bookings = Reserva::findOrFail($id);
 
         $bookings->update($request->all());
 
@@ -72,7 +72,7 @@ class BookingController extends Controller
      */
     public function destroy(string $id)
     {
-        $bookings = Booking::findOrFail($id);
+        $bookings = Reserva::findOrFail($id);
 
         $bookings->delete();
 
