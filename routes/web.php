@@ -15,7 +15,7 @@ Route::get('/', function () {
     return redirect()->route('home');
 });
 
-Route::view('/home', 'web.home')->name('home');
+Route::view('/', 'web.home')->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/rooms', [PageController::class, 'rooms'])->name('rooms');
