@@ -331,4 +331,9 @@ header ul li a:hover {
 
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
