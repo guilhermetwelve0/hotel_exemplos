@@ -7,11 +7,18 @@
     <hr />
 
     @if ($errors->has('cpf'))
-        <div id="error-message" class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Erro:</strong> {{ $errors->first('cpf') }}
-            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Fechar"></button>
-        </div>
-    @endif
+    <div id="error-message" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Erro:</strong> {{ $errors->first('cpf') }}
+    </div>
+    <script>
+        // Certifique-se de que o Bootstrap JS está incluído para que o botão de fechar funcione
+        var alert = new bootstrap.Alert(document.getElementById('error-message'));
+        setTimeout(function() {
+            alert.close();
+        }, 5000);
+    </script>
+@endif
+
 
     <form action="{{ route('guests.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
