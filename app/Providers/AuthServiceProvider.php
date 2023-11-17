@@ -13,14 +13,17 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+        AuthController::class => GuestPolicy::class,
+        GuestController::class => GuestPolicy::class,
     ];
+
+
 
     /**
      * Register any authentication / authorization services.
      */
     public function boot(): void
     {
-        //
+        $this->registerPolicies();
     }
 }

@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::table('rooms', function (Blueprint $table) {
             $table->string('price_per_day', 255)->nullable(true)->change();
             $table->bigInteger('branch_id')->nullable(true)->change();
-            $table->string('status', 11)->nullable(true)->change();;
+            $table->string('status', 11)->nullable(true)->change();
+            $table->string('status_reservation', 255)->nullable(true)->change();
             $table->bigInteger('created_by')->nullable(true)->change();
         });
     }

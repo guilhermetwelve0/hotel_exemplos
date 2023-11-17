@@ -19,11 +19,16 @@
       <span>Hotel</span></a>
   </li>
 -->
+@php
+    $user = Auth::user();
+@endphp
+@if($user && in_array($user->level, ['user', 'admin']))
   <li class="nav-item">
     <a class="nav-link" href="{{ route('bookings') }}">
       <i class="fa fa-list"></i>
       <span>Lista de Reservas</span></a>
   </li>
+  @endif
 <!--
   <li class="nav-item">
     <a class="nav-link" href="{{ route('dashboard') }}">
@@ -31,29 +36,50 @@
       <span>Dashboard</span></a>
   </li>
 -->
+@php
+    $user = Auth::user();
+@endphp
+@if($user && in_array($user->level, ['admin']))
   <li class="nav-item">
     <a class="nav-link" href="{{ route('guests') }}">
       <i class="fa fa-users"></i>
       <span>Hóspedes</span></a>
   </li>
+@endif
 
+
+@php
+    $user = Auth::user();
+@endphp
+@if($user && in_array($user->level, ['admin']))
   <li class="nav-item">
     <a class="nav-link" href="{{ route('rooms') }}">
       <i class="fa fa-bed"></i>
       <span>Informações - Quartos</span></a>
   </li>
+  @endif
 
+  @php
+    $user = Auth::user();
+@endphp
+@if($user && in_array($user->level, ['admin']))
   <li class="nav-item">
     <a class="nav-link" href="{{ route('room_types') }}">
       <i class="fa fa-door-open"></i>
       <span>Tipos de Quartos</span></a>
   </li>
+  @endif
 
+@php
+    $user = Auth::user();
+@endphp
+@if($user && in_array($user->level, ['admin']))
   <li class="nav-item">
     <a class="nav-link" href="{{ route('services') }}">
       <i class="fa fa-bell"></i>
       <span>Serviços</span></a>
   </li>
+  @endif
 <!--  
   <li class="nav-item">
   <a class="nav-link" href="{{ route('profile') }}">

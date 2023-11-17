@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Room;
+use App\Models\RoomType;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -14,7 +15,6 @@ class RoomController extends Controller
     {
         $rooms = Room::orderBy('created_at', 'DESC')->get();
         return view('rooms.index', compact('rooms'));
-
     }
 
     /**
@@ -22,7 +22,8 @@ class RoomController extends Controller
      */
     public function create()
     {
-        return view('rooms.create');
+        $room_types = RoomType::all();
+        return view('rooms.create', compact('room_types'));
     }
 
     /**
@@ -30,6 +31,14 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'floor' => 'required',
+            'room_no' => 'required',
+            'room_type_id' => 'required',
+            'description' => 'required',
+            'status' => 'required',
+        ]);
+
         Room::create($request->all());
 
         return redirect()->route('rooms')->with('success', 'Quarto adicionando com sucesso');

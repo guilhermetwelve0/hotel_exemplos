@@ -18,6 +18,7 @@ class AuthController extends Controller
 
     public function registerSave(Request $request)
     {
+        $this->authorize('register', User::class);
         Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email',
@@ -28,7 +29,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'level' => 'Admin'
+            'level' => 'user'
         ]);
 
         return redirect()->route('login');

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>Hotel Website</title>
+  <title>ESC - Hotel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -217,8 +217,11 @@ header ul li a:hover {
         <a href="#" class="logo"> <img src="" alt=""> </a>
 
         <ul class="nav-menu">
+          <li> <a href="{{route('home')}}" class="nav-link">Home</a> </li>
           <li> <a href="{{route('register')}}" class="nav-link">Registro</a> </li>
           <li> <a href="{{route('login')}}" class="nav-link">Login</a> </li>
+          <li> <a href="{{route('about')}}" class="nav-link">Sobre Nós</a> </li>
+          <li> <a href="{{route('contact')}}" class="nav-link">Contato</a> </li>
         </ul>
 
         <div class="hambuger">
@@ -258,7 +261,7 @@ header ul li a:hover {
         </div>
       </div>
       <div class="image">
-        <img src="{{ asset('img/home1.jpg') }}" class="slide">
+        <img src="{{asset('img/home1.jpg')}}" class="slide">
       </div>
       <div class="image_item">
         <img src="{{asset('img/home1.jpg')}}" alt="" class="slide active" onclick="img('img/home1.jpg')">

@@ -12,14 +12,14 @@
         </div>
         <div class="col mb-3">
             <label class="form-label">Hóspede</label>
-            <input type="text" name="guests_id" class="form-control" placeholder="Nome do Hóspede" value="{{ $bookings->guests_id }}" readonly>
+            <input type="text" name="guests_id" class="form-control" placeholder="Nome do Hóspede" value="{{ $bookings->hospede_name }}" readonly>
         </div>
     </div>
     <div class="row">
-        <div class="col mb-3">
+        {{-- <div class="col mb-3">
             <label class="form-label">RG do Hospede</label>
             <input type="text" name="room_id" class="form-control" placeholder="Quarto da Reserva" value="{{ $bookings->room_id }}" readonly>
-        </div>
+        </div> --}}
         <div class="col mb-3">
             <label class="form-label">Check-in</label>
             <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in" value="{{ $bookings->check_in_date }}" readonly>
