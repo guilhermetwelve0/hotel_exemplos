@@ -38,9 +38,12 @@
         <div class="row mb-3">
             <div class="col">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p>Data do Check-In</p>
                 <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in" id="checkInDate" onchange="validateDates()">
 =======
+=======
+>>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
                 <label class="form-label">Data do Check-out</label>
                 <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-out">
 >>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
@@ -54,6 +57,7 @@
         </div>
         <div class="row mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="col">
                 <p>Status</p>
                 <select name="status" class="form-control">
@@ -62,6 +66,8 @@
                 </select>
             </div>
 =======
+=======
+>>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
     <div class="col">
         <select name="status" class="form-control">
             <option value=" ">Status da Reserva</option>
@@ -73,6 +79,9 @@
             <option value="Cancelada">Cancelada</option>
         </select>
     </div>
+<<<<<<< HEAD
+>>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
+=======
 >>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
         </div>
 

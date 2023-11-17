@@ -153,6 +153,7 @@ header ul li a:hover {
   width: 100%;
   height: 100%;
 }
+<<<<<<< HEAD
 
 .home .text {
   max-width: 50%;
@@ -160,6 +161,15 @@ header ul li a:hover {
   margin: 20% 0 0 10%;
 }
 
+=======
+
+.home .text {
+  max-width: 50%;
+  color: white;
+  margin: 20% 0 0 10%;
+}
+
+>>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
 .home h1 {
   font-size: 80px;
   font-weight: 400;
@@ -332,7 +342,12 @@ header ul li a:hover {
 </body>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> b3f2f5bcdaf46a8f2fab82e619e27f5d42c3ad9d
 =======
 </html>
 
